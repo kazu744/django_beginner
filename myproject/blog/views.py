@@ -3,5 +3,5 @@ from blog.models import Post
 
 # Create your views here.
 def post_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by("-date_posted")
     return render(request, "post_list.html", {"posts": posts})
