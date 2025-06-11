@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        <!-- ブログのタイトル -->
+        {{ post.title }}
+    </title>
+</head>
+<body>
+    <h1>
+        <!-- ブログのタイトル -->
+        {{ post.title }}
+    </h1>
+    <br>
+    <h2>
+        <!-- ブログのサブタイトル -->
+        {{ post.subtitle }}
+    </h2>
+    <p>
+        <!-- ブログの投稿者 -->
+        Author: {{ post.author }}
+        <br>
+        <!-- ブログの投稿日（"m d, y"表記） -->
+        Date: {{ post.date_posted|date:"M d, y" }}
+    </p>
+    <br>
+    <p>Content:</p>
+    <p>
+        <!-- ブログのコンテンツ -->
+        {{ post.content }}
+    </p>
+    <hr><br>
+    <a href="{% url 'post_list' %}">Back Home</a>
+</body>
+</html>
