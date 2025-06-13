@@ -18,5 +18,5 @@ def post_create(request):
             form.save()
             return redirect("post_list")
     else:
-        form = PostForm(request.GET)
+        form = PostForm()
     return render(request, "post_create.html", {"form": form})

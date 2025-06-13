@@ -5,6 +5,9 @@
     <title>Blog</title>
 </head>
 <body>
+    <form action="{% url 'post_create' %}" method="get">
+        <button type="submit">New Post</button>
+    </form>
     <!-- ページタイトル -->
     <h1>All Posts</h1>
     <!-- ページサブタイトル -->

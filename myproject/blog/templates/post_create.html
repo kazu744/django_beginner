@@ -6,7 +6,12 @@
 </head>
 <body>
     <h1>Create New Post</h1>
+    <form method="post">
     <!-- ブログ投稿フォームの作成 -->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Post</button>
+    </form>
     <br>
     <!-- ページ遷移のリンク -->
     <a href="{% url 'post_list' %}">Back Home</a>
